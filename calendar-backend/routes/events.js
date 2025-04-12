@@ -16,13 +16,6 @@ router.post("/", async (req, res) => {
   res.json(saved);
 });
 
-// PUT update event
-// router.put("/:id", async (req, res) => {
-//   const updated = await Event.findByIdAndUpdate(req.params.id, req.body, {
-//     new: true,
-//   });
-//   res.json(updated);
-// });
 
 // DELETE an event
 router.delete("/:id", async (req, res) => {

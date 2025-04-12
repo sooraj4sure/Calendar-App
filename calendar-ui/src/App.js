@@ -14,7 +14,7 @@ import CustomEvent from "./components/CustomEvent";
 
 const localizer = momentLocalizer(moment);
 
-function App() {
+function App () {
   const dispatch = useDispatch();
 
 
@@ -96,7 +96,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-2xl font-bold text-center my-4">My Calendar</h1>
+      <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-6">📅 My Personal Calendar</h1>
+
 
       <BigCalendar
         localizer={localizer}

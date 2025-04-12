@@ -58,3 +58,85 @@ body {
     opacity: 0.9;
   }
   
+
+  /* App.css */
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6; /* light gray */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Beautify react-big-calendar */
+.rbc-calendar {
+  background-color: rgb(196, 189, 189);
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+
+.rbc-toolbar button {
+  background-color: #a4a5f1;
+  color: rgb(17, 2, 2);
+  border-radius: 4px;
+  padding: 5px 12px;
+  margin: 0 2px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.rbc-toolbar button:disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+}
+
+.rbc-event {
+  font-size: 0.9rem;
+  border-radius: 5px !important;
+  padding: 4px 8px !important;
+}
+
+
+/* hover effect on events */
+.rbc-event:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+/* For EventModal and DeleteModal, wrap the modal with a blurred background and modern dialog box */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Light background for each calendar box */
+.rbc-month-view .rbc-day-bg {
+  background-color: #fbf7f7; /* very light gray */
+  border: 1px solid #e5e7eb; /* soft border */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.rbc-month-view .rbc-day-bg:hover {
+  background-color: #e0f2fe; /* light blue on hover */
+  cursor: pointer;
+}
