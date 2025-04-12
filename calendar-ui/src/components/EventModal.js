@@ -17,9 +17,7 @@ const EventModal = ({ onClose, onSave }) => {
     });
     onClose(); // Close modal after saving
   };
-  
-  dispatch(setEvents(formattedEvents));
-    
+
   return (
     <div className="modal-overlay">
       <div className="modal">
