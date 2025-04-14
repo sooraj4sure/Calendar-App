@@ -27,7 +27,7 @@ function App () {
 
   //  Fetch events from backend
   useEffect(() => {
-    fetch("http://localhost:5000/events")
+    fetch(`https://calendar-app-ui-zpc7.vercel.app/`)
       .then((res) => res.json())
       .then((data) => setEvents(data))
       .catch((err) => console.error("Failed to fetch events", err));
@@ -35,7 +35,7 @@ function App () {
 
   //  Save new event to backend and Redux
   const handleAddEvent = (event) => {
-    fetch("http://localhost:5000/events", {
+    fetch(`https://calendar-app-ui-zpc7.vercel.app/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(event),
@@ -63,7 +63,7 @@ function App () {
 
   //  Confirm delete
   const confirmDelete = () => {
-    fetch(`http://localhost:5000/events/${selectedEvent._id}`, {
+    fetch(`https://calendar-app-ui-zpc7.vercel.app/`, {
       method: "DELETE",
     })
       .then(() => {
